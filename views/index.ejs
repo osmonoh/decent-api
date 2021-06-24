@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decent API</title>
+    <link rel="stylesheet" href="./style/index.css" />
+  </head>
+  <body id="home-anchor">
+    <!-- ------ -->
+    <!-- NAVBAR -->
+    <div class="wrap-nav">
+      <div class="container">
+        <nav class="nav">
+          <div class="logo">
+            <!-- <a href="#home-anchor">Decent<span>API</span></a> -->
+            <a class="nav-link" id="home">Decent<span>API</span></a>
+          </div>
+          <div class="nav-links">
+            <!-- <a href="#try-anchor" class="nav-link">Try it out</a>
+            <a href="#start-anchor">Get started</a>
+            <a href="#">Support us</a> -->
+            <a class="nav-link" id="try">Try it out</a>
+            <a class="nav-link" id="start">Get started</a>
+            <a class="nav-link" id="support">Support us</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- ------------ -->
+    <!-- HERO SECTION -->
+    <div class="wrap-hero">
+      <div class="container">
+        <div class="hero-section">
+          <div class="cherry-heading">
+            <img
+              src="./images/cherries.svg"
+              alt="cherry image"
+              width="100"
+              height="100"
+            />
+            <h1 class="heading">
+              Test your front-end against our decent<span>API</span>
+            </h1>
+          </div>
+          <div class="hero-cards">
+            <div class="card">
+              <h3 class="card-headline">Fruity data</h3>
+              <p class="card-text">
+                No more tedious sample data creation, fresh and healthy data at
+                your disposal.
+              </p>
+            </div>
+            <div class="card">
+              <h3 class="card-headline">Real code</h3>
+              <p class="card-text">
+                Work with real request and response code. GET, POST, PUT, DELETE
+                supported.
+              </p>
+            </div>
+            <div class="card">
+              <h3 class="card-headline">Always there</h3>
+              <p class="card-text">
+                Unlimited free access, whenever you need it, always there for
+                you.
+              </p>
+            </div>
+          </div>
+          <h2 class="sub-heading">
+            A hosted REST API ready to respond to your AJAX requests.
+          </h2>
+          <div class="down-arrow"><span>&#10173;</span></div>
+        </div>
+      </div>
+      <div id="try-anchor"></div>
+    </div>
+    <!-- ----------- -->
+    <!-- TRY SECTION -->
+    <div class="container">
+      <div class="try-section">
+        <h2 class="try-section-heading">Try it out</h2>
+        <div class="try-section-main">
+          <div class="methods-box">
+            <div class="req-res methods-header">
+              <h4 class="methods-header-headline">Method</h4>
+              <p class="methods-header-type">GET</p>
+            </div>
+
+            <div class="methods">
+              <!-- including method divs -->
+              <% methods.forEach(item=>{ %> <%-include('methodDiv', {
+              pText:item.pText, divClass: item.divClass, btnClass:
+              item.btnClass, method:item.method}) %> <% }) %>
+            </div>
+          </div>
+          <div class="request">
+            <div class="req-res request-header">
+              <h4 class="request-header-headline">Request</h4>
+              <p class="request-header-url">/fruits</p>
+            </div>
+            <div><pre class="req-res request-example hidden"></pre></div>
+          </div>
+          <div class="response">
+            <div class="req-res response-header">
+              <h4 class="response-header-headline">Response</h4>
+              <p class="response-header-code">200</p>
+            </div>
+            <div><pre class="req-res response-example"></pre></div>
+          </div>
+        </div>
+      </div>
+      <div id="start-anchor"></div>
+    </div>
+    <!-- ------------- -->
+    <!-- START SECTION -->
+    <div class="wrap-start">
+      <div class="container">
+        <div class="start-section">
+          <h2 class="start-section-heading">Getting started</h2>
+          <div class="start-section-main">
+            <p class="start-section-intro">
+              Here you can find examples of using Fetch API with JavaScript. The
+              Fetch API provides an interface for fetching resources (including
+              across the network). We will use the <code>fetch()</code> method
+              which takes one mandatory argument, the path to the resource you
+              want to fetch. It returns a Promise that resolves to the Response
+              to that request — as soon as the server responds with headers —
+              even if the server response is an HTTP error status. You can also
+              optionally pass in an options object as the second argument.
+            </p>
+            <!-- including fetch examples -->
+            <%-include ('fetchExamples')%>
+          </div>
+        </div>
+      </div>
+      <div id="support-anchor"></div>
+    </div>
+    <!-- --------------- -->
+    <!-- SUPPORT SECTION -->
+    <div class="container">
+      <div class="support-section">
+        <h2 class="support-section-heading">Support us</h2>
+      </div>
+    </div>
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <footer class="page-footer">
+      <p>Coded by DCH &copy; 2021</p>
+    </footer>
+    <!-- ------ -->
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>

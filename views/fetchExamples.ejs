@@ -1,0 +1,145 @@
+<!-- GET (list) -->
+<div class="fetch-example">
+  <h4 class="fetch-example-heading">Getting a list of items</h4>
+  <p class="fetch-example-text">
+    To get all the resources (an array of fruits) use the general endpoint
+    <code>/fruits</code>. No need to use the options object as the second
+    argument.
+  </p>
+  <code>
+    <pre class="fetch-code">
+fetch("/fruits")
+  .then((res) => res.json())
+  .then((data) => console.log(data));</pre
+    >
+  </code>
+</div>
+
+<!-- GET (item) -->
+<div class="fetch-example">
+  <h4 class="fetch-example-heading">Getting a single item</h4>
+  <p class="fetch-example-text">
+    To get a single item (a fruit) use an id in the URL like so:
+    <code>/fruits/15</code>. No need to use the options object as the second
+    argument.
+  </p>
+  <code>
+    <pre class="fetch-code">
+fetch("/fruits/15")
+  .then((res) => res.json())
+  .then((data) => console.log(data));</pre
+    >
+  </code>
+</div>
+
+<!-- POST -->
+<div class="fetch-example">
+  <h4 class="fetch-example-heading">Creating an item</h4>
+  <p class="fetch-example-text">
+    To create an item use the general endpoint <code>/fruits</code>, that way
+    the item will be added into the existing list of items. Use the options
+    object with properties: <code>method</code>, <code>headers</code> and
+    <code>body</code> as the second argument as shown bellow.
+  </p>
+  <code>
+    <pre class="fetch-code">
+fetch("/fruits", {
+  method: "POST",
+  headers: {
+    Accept: "application/json",
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    genus: "Prunus",
+    name: "Plum",
+    family: "Rosaceae",
+    order: "Rosales",
+    nutritions: {}
+  })
+})
+  .then((res) => res.json())
+  .then((data) => console.log(data));</pre
+    >
+  </code>
+</div>
+
+<!-- PUT -->
+<div class="fetch-example">
+  <h4 class="fetch-example-heading">Updating an item</h4>
+  <p class="fetch-example-text">
+    To update an item use an id of the item you want to update in the URL like
+    so: <code>/fruits/15</code>. Use the options object with properties:
+    <code>method</code>, <code>headers</code> and <code>body</code> as the
+    second argument as shown bellow. The item you are updating will be
+    overwritten by the body you provide.
+  </p>
+  <code>
+    <pre class="fetch-code">
+fetch("/fruits/15", {
+  method: "PUT",
+  headers: {
+    Accept: "application/json",
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    genus: "Carica",
+    name: "Papaya",
+    id: 15,
+    family: "Caricaceae",
+    order: "Brassicales",
+    nutritions: {}
+  })
+})
+  .then((res) => res.json())
+  .then((data) => console.log(data));</pre
+    >
+  </code>
+</div>
+
+<!-- PATCH -->
+<div class="fetch-example">
+  <h4 class="fetch-example-heading">Patching an item</h4>
+  <p class="fetch-example-text">
+    To patch an item use an id of the item you want to patch in the URL like so:
+    <code>/fruits/15</code>. Use the options object with properties:
+    <code>method</code>, <code>headers</code> and <code>body</code>
+    as the second argument as shown bellow. Only the properties you provide in
+    the body will be overwritten or added.
+  </p>
+  <code>
+    <pre class="fetch-code">
+fetch("/fruits/15", {
+  method: "PATCH",
+  headers: {
+    Accept: "application/json",
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    name: "Plum",
+    nutritions: {}
+  })
+})
+  .then((res) => res.json())
+  .then((data) => console.log(data));</pre
+    >
+  </code>
+</div>
+
+<!-- DELETE -->
+<div class="fetch-example">
+  <h4 class="fetch-example-heading">Deleting an item</h4>
+  <p class="fetch-example-text">
+    To delete an item use an id of the item you want to delete in the URL like
+    so: <code>/fruits/15</code>. Use the options object with property
+    <code>method</code> as the second argument as shown bellow.
+  </p>
+  <code>
+    <pre class="fetch-code">
+fetch("/fruits/15", {
+  method: "DELETE"  
+})
+  .then((res) => res.json())
+  .then((data) => console.log(data));</pre
+    >
+  </code>
+</div>
