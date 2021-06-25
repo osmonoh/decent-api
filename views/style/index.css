@@ -27,9 +27,7 @@ a {
 /* NAVBAR */
 
 .wrap-nav {
-  /* margin-bottom: 8rem; */
   box-shadow: 0 0 10px #555;
-  /* box-shadow: 0 0 8px #bbb; */
   background-color: #555;
   position: sticky;
   top: 0;
@@ -74,19 +72,15 @@ a {
 .wrap-hero {
   background-color: #777;
   color: #eee;
-  /* margin-bottom: 8rem; */
 }
 
 .hero-section {
   position: relative;
   min-height: calc(100vh - 6.8rem);
-  /* background-image: linear-gradient(#fff, #555); */
-  /* background-color: #555; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding: 6rem 0; */
   gap: 8rem;
 }
 
@@ -96,9 +90,6 @@ a {
 
 .heading {
   margin-top: 2rem;
-  /* margin-bottom: 4rem; */
-  /* padding: 2rem; */
-  /* text-align: center; */
   color: #eee;
 
   text-shadow: 0 0 4px #555;
@@ -119,7 +110,7 @@ a {
 
 .card {
   width: 240px;
-  height: 240px;
+  /* height: 240px; */
   box-shadow: 0 0 10px #555;
   border-radius: 10px;
   display: flex;
@@ -129,11 +120,10 @@ a {
   color: #555;
   padding: 2.8rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .sub-heading {
-  /* text-align: center; */
   text-shadow: 0 0 4px #555;
   font-size: 2.8rem;
   font-weight: 400;
@@ -141,15 +131,12 @@ a {
 
 .down-arrow {
   position: absolute;
-  bottom: 3rem;
+  bottom: 4.2rem;
   width: 3.4rem;
   height: 3.4rem;
   box-shadow: 0 0 4px #666;
   border-radius: 50%;
   background-color: #999;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   animation: arrow 0.5s infinite alternate;
 }
 
@@ -177,7 +164,8 @@ a {
 
 .try-section {
   min-height: 100vh;
-  padding-top: 12rem;
+  padding: 12rem 0 8rem;
+  font-size: 1.6rem;
 }
 
 .try-section-heading,
@@ -191,6 +179,20 @@ a {
   font-weight: 400;
 }
 
+.try-section-intro,
+.start-section-intro {
+  margin-bottom: 4.8rem;
+  text-align: justify;
+}
+
+.decent-span {
+  font-weight: 700;
+}
+
+.try-section-intro code {
+  color: #777;
+}
+
 .try-section-main {
   display: flex;
   justify-content: space-between;
@@ -198,18 +200,10 @@ a {
 
 .methods-box {
   width: 32%;
-  /* margin-top: 8rem; */
-  /* max-height: fit-content; */
-  /* box-shadow: 0 0 4px #ddd; */
 }
-
-/* .method {
-  border: 1px solid #ddd;
-} */
 
 .methods > * + * {
   border-top: 1px solid #ddd;
-  /* border-top: none; */
 }
 
 .method {
@@ -217,7 +211,6 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 1.6rem;
-  font-size: 1.6rem;
 }
 
 .selected-method {
@@ -251,10 +244,8 @@ a {
 
 .req-res {
   margin-bottom: 1.6rem;
-  box-shadow: 0 0 6px #bbb;
+  box-shadow: 0 0 8px #ddd;
   border-radius: 4px;
-
-  /* background-color: rgba(238, 238, 238, 0.5); */
   padding: 1.2rem 1.6rem;
   font-size: 1.2rem;
   overflow: auto;
@@ -280,7 +271,6 @@ a {
 
 .response-example {
   max-height: 480px;
-  /* background-color: transparent; */
 }
 
 /* *** */
@@ -297,20 +287,6 @@ a {
   padding-bottom: 4rem;
   color: #eee;
   font-size: 1.6rem;
-}
-
-/* .start-section-heading {
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 4rem;
-  padding-bottom: 2rem;
-  text-align: center;
-  font-size: 2.8rem;
-  font-weight: 400;
-} */
-
-.start-section-intro {
-  margin-bottom: 3.2rem;
-  text-align: justify;
 }
 
 .start-section-intro code,
@@ -342,9 +318,57 @@ a {
 /* SUPPORT US SECTION */
 
 .support-section {
-  min-height: calc(100vh - 8rem);
+  position: relative;
+  height: calc(100vh - 8rem);
   padding-top: 12rem;
   font-size: 1.6rem;
+}
+
+.support-section-main {
+  padding-top: 10rem;
+}
+
+.support-box {
+  box-shadow: 0 0 8px #ddd;
+  border-radius: 4px;
+  padding: 4.8rem 3.2rem;
+  text-align: center;
+}
+
+.support-box > p:first-child {
+  margin-bottom: 1rem;
+}
+.support-box > p:nth-child(2) {
+  margin-bottom: 3.2rem;
+}
+.support-box > p:last-child {
+  font-size: 1.4rem;
+}
+
+.support-form {
+  margin-bottom: 4.8rem;
+}
+
+.support-radios {
+  width: fit-content;
+  margin: 0 auto 3.2rem;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.support-section-footer {
+  position: absolute;
+  bottom: 1.2rem;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.support-section-footer a {
+  text-decoration: underline;
 }
 
 /* *** */
@@ -360,6 +384,7 @@ a {
 }
 
 /* *** */
+
 .hidden {
   display: none;
 }

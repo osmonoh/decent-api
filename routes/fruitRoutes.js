@@ -1,7 +1,7 @@
 const express = require("express");
-// const fruits = require("../model/fruits");
-const db = require("../model/database");
-const fruits = db.get("fruits").value();
+const fruits = require("../model/fruits");
+// const db = require("../model/database");
+// const fruits = db.get("fruits").value();
 
 const Router = express.Router();
 
@@ -32,11 +32,15 @@ Router.get("/:id", (req, res) => {
 
 // TODO: finish all these POST, PUT, PATCH, DELETE routes
 Router.post("/", (req, res) => {
-  res.json({ success: true, data: { ...req.body, id: 16 } });
+  if (Object.keys(req.body).length) {
+    res.json({ success: true, data: { ...req.body, id: 16 } });
+  } else {
+    res.json({ success: false, message: "No request body provided" });
+  }
 });
 
 Router.put("/:id", (req, res) => {
-  res.json({ success: true, data: req.body });
+  res.json({ success: true, data: { ...req.body, id: req.params.id } });
 });
 
 Router.patch("/:id", (req, res) => {
@@ -46,6 +50,11 @@ Router.patch("/:id", (req, res) => {
 
   if (fruit) {
     res.json({ success: true, data: { ...fruit, ...req.body } });
+  } else {
+    res.json({
+      succes: false,
+      message: `No fruit with id: ${req.params.id}`,
+    });
   }
 });
 
@@ -58,6 +67,11 @@ Router.delete("/:id", (req, res) => {
     res.json({
       success: true,
       message: `Item with id: ${req.params.id} was deleted!`,
+    });
+  } else {
+    res.json({
+      succes: false,
+      message: `No fruit with id: ${req.params.id}`,
     });
   }
 });

@@ -1,10 +1,11 @@
 # TODO:
 
-- fix the URLs in the fetch examples so that it coresponds with the real ones once its deplyed
-- also probably add 'api' into the url
 - finish the routes properly
+- create controllers
 - get rid of unused db
-- add delayed response (for all methods)
 - error handling
 - check and implement status codes
-- add support section content + check Stripe Checkout
+- ask Naqvi how to set statuses to responses
+- add Stripe Checkout
+- fix the URLs in the fetch examples so that it coresponds with the real ones once its deployed
+- add delayed response (for all methods)?

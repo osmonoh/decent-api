@@ -12,6 +12,14 @@ app.use(express.static(__dirname + "/views"));
 app.use(express.json());
 
 app.use("/", mainRoutes);
-app.use("/fruits", fruitRoutes);
+app.use("/api/fruits", fruitRoutes);
+
+// finish error handling
+app.use((req, res, next) => {
+  let err = new Error();
+  err.status = 404;
+  err.message = "Page not found";
+  res.json(err);
+});
 
 app.listen(PORT, () => console.log("Server running on port: ", PORT));

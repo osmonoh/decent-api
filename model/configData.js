@@ -1,7 +1,3 @@
-const configData = {
-  selected: "listFruits",
-};
-
 const methods = {
   methods: [
     {
@@ -49,11 +45,4 @@ const methods = {
   ],
 };
 
-const postReqExample = {
-  genus: "Prunus",
-  name: "Plum",
-  family: "Rosaceae",
-  order: "Rosales",
-};
-
-module.exports = { configData, methods };
+module.exports = { methods };
