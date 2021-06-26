@@ -10,7 +10,7 @@
   </p>
   <code>
     <pre class="fetch-code">
-fetch("/fruits")
+fetch("https://decentapi.herokuapp.com/api/fruits")
   .then((res) => res.json())
   .then((data) => console.log(data));</pre
     >
@@ -27,7 +27,7 @@ fetch("/fruits")
   </p>
   <code>
     <pre class="fetch-code">
-fetch("/fruits/15")
+fetch("https://decentapi.herokuapp.com/api/fruits/15")
   .then((res) => res.json())
   .then((data) => console.log(data));</pre
     >
@@ -45,7 +45,7 @@ fetch("/fruits/15")
   </p>
   <code>
     <pre class="fetch-code">
-fetch("/fruits", {
+fetch("https://decentapi.herokuapp.com/api/fruits", {
   method: "POST",
   headers: {
     Accept: "application/json",
@@ -77,7 +77,7 @@ fetch("/fruits", {
   </p>
   <code>
     <pre class="fetch-code">
-fetch("/fruits/15", {
+fetch("https://decentapi.herokuapp.com/api/fruits/15", {
   method: "PUT",
   headers: {
     Accept: "application/json",
@@ -110,7 +110,7 @@ fetch("/fruits/15", {
   </p>
   <code>
     <pre class="fetch-code">
-fetch("/fruits/15", {
+fetch("https://decentapi.herokuapp.com/api/fruits/15", {
   method: "PATCH",
   headers: {
     Accept: "application/json",
@@ -137,7 +137,7 @@ fetch("/fruits/15", {
   </p>
   <code>
     <pre class="fetch-code">
-fetch("/fruits/15", {
+fetch("https://decentapi.herokuapp.com/api/fruits/15", {
   method: "DELETE"  
 })
   .then((res) => res.json())
