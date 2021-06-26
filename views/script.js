@@ -36,7 +36,7 @@ fetch("/api/fruits")
 
 // BUTTONS FOR REQUEST METHODS //////////////////////////////
 //
-// universal click handler for buttons
+// universal click handler function for buttons
 const btnClickHandler = (e, url, method, code, body = undefined) => {
   metHeaderType.textContent = method;
   reqHeaderUrl.textContent = "/api" + url;
