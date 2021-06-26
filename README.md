@@ -1,6 +1,6 @@
-# REST API
+# decentAPI
 
-This is my first backend project where I created a small REST API with frontend page introducing the API, offering some interactive examples of requests and responses, as well as documentation. It is deployed on Heroku. These are some of the technologies and approaches employed in the project:
+This is my first backend project where I created a small REST API with frontend page introducing the API, offering some interactive examples of requests and responses, as well as documentation. Its name is [decentAPI](https://decentapi.herokuapp.com/) and it is deployed on Heroku. These are some of the technologies and approaches employed in the project:
 
 - MVC design pattern
 - Node.js with Express
