@@ -1,6 +1,6 @@
 # REST API
 
-This is my first backend project where I created a small REST API with frontend page introducing the API, offering some interactive examples of requests and responses, as well as documentation. These are some of the technologies and approaches employed in the project:
+This is my first backend project where I created a small REST API with frontend page introducing the API, offering some interactive examples of requests and responses, as well as documentation. It is deplyed on Heroku. These are some of the technologies and approaches employed in the project:
 
 - MVC design pattern
 - Node.js with Express
